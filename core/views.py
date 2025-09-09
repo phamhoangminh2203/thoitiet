@@ -675,7 +675,7 @@ class Map4DReverseGeocodeView(APIView):
         if not lat or not lng:
             return Response({"error": "lat and lng are required"}, status=status.HTTP_400_BAD_REQUEST)
         try:
-            api_key = "032051294345ff49b9b5f3007e16b139"
+            api_key = "3815de3fd2c9832724d9b975b5efdbea"
             url = f"https://api.map4d.vn/sdk/v2/geocode?key={api_key}&location={lat},{lng}"
             response = requests.get(url)
             data = response.json()
